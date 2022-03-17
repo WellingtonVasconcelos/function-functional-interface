@@ -24,7 +24,7 @@ public class Program {
 		 * A função "map" (não confunda com a estrutura de dados Map) é uma função que aplica uma função a todos elementos de uma stream (STREAM = Sequencia de dados.
 		 */
 		
-		List<String> names = list.stream().map(Product::staticUpperCaseName).collect(Collectors.toList());
+		List<String> names = list.stream().map(Product::nonStaticUpperCaseName).collect(Collectors.toList());
 		
 		names.forEach(System.out::println);
 	}
