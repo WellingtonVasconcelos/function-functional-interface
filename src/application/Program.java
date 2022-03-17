@@ -6,7 +6,6 @@ import java.util.Locale;
 import java.util.stream.Collectors;
 
 import entities.Product;
-import util.UpperCaseName;
 
 public class Program {
 
@@ -25,7 +24,7 @@ public class Program {
 		 * A função "map" (não confunda com a estrutura de dados Map) é uma função que aplica uma função a todos elementos de uma stream (STREAM = Sequencia de dados.
 		 */
 		
-		List<String> names = list.stream().map(new UpperCaseName()).collect(Collectors.toList());
+		List<String> names = list.stream().map(Product::staticUpperCaseName).collect(Collectors.toList());
 		
 		names.forEach(System.out::println);
 	}
