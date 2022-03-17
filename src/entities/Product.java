@@ -29,7 +29,11 @@ public class Product {
 		this.price = price;
 	}
 
-		
+	//Método estático trabalha com o produto que você passa com argumento
+	public static String staticUpperCaseName(Product p) {
+		return p.getName().toUpperCase();
+	}
+
 	@Override
 	public String toString() {
 		return  name + ", " +  String.format("%.2f",  price);
